@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'io.github.cynagenautes.pipepipe.mspgothic'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId 'io.github.cynagenautes.pipepipe.mspgothic'
+        // LSPosed / Vector support Android 8.1 (API 27) and later.
+        minSdk 27
+        targetSdk 36
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    buildTypes {
+        release {
+            // The entry class is referenced only from META-INF/xposed/java_init.list,
+            // so keep the code as is instead of maintaining keep rules.
+            minifyEnabled false
+            // Personal use only: sign with the local debug key so the APK is installable.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        // Keep the bundled font uncompressed so Typeface can map it directly.
+        noCompress += 'ttf'
+    }
+}
+
+dependencies {
+    // Modern Xposed API (libxposed) 101. Provided by the framework at runtime.
+    compileOnly 'io.github.libxposed:api:101.0.1'
+}

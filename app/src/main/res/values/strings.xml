@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PipePipe MS PGothic</string>
+    <string name="xposed_description">PipePipeの弾幕コメントを常にMS Pゴシックで表示します</string>
+</resources>
