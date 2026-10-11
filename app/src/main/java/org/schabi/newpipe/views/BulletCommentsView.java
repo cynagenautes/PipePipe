@@ -291,6 +291,9 @@ public final class BulletCommentsView extends ConstraintLayout {
                 case "LXGW WenKai Screen":
                     fontToBeUsed = ResourcesCompat.getFont(context, R.font.lxgw_wenkai);
                     break;
+                case "MS PGothic":
+                    fontToBeUsed = ResourcesCompat.getFont(context, R.font.ms_pgothic);
+                    break;
                 default:
                     fontToBeUsed = Typeface.DEFAULT;
                     break;
